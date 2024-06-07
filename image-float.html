@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+border: 1px solid red;
+width: 200px;
+float: left;
+        }
+        .float-left{
+        float: left;
+        }
+        .clear-left{
+            clear: left;
+        }
+    </style>
+</head>
+<body>
+   <div> <img src="./maxresdefault.jpg" alt="Здесь должа быть картинка">
+    First, user authentication has nothing to do with user.name and user.email git config.
+And second, compared to the old answer "remove credentials from git", the latest Git for Windows uses Git Credential Manager (Git 2.9.2 => GCM 1.5.0). Check your config (git config -l) and see if "manager" (or, more recently, 2020+: "manager-core") is registered there. If not, set it up with:
+git config --global credential.helper manager-core
+Since its v1.3.0 (April 2016), it had a delete command to purge credentials.
+git credential-manager delete <url>
+Update 2018: "delete" is now deprecated, use reject: Update 2020: 
+</div>
+<div class="float-left"> Div1</div>
+<div class="float-left"> Div2</div>
+<h1 class="clear-left">Header 1</h1>
+</body>
+</html>
